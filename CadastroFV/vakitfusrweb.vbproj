@@ -1,0 +1,577 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Web"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{F420C76B-78A1-4064-9ACD-CAB863963C70}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "VAKItfUsrWeb"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "VAKItfUsrWeb"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Configuration.Install"
+                    AssemblyName = "System.Configuration.Install"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Configuration.Install.dll"
+                />
+                <Reference
+                    Name = "SolpartWebControls"
+                    AssemblyName = "SolpartWebControls"
+                    HintPath = "bin\SolpartWebControls.dll"
+                />
+                <Reference
+                    Name = "eworld.ui"
+                    AssemblyName = "eWorld.UI"
+                    HintPath = "bin\eworld.ui.dll"
+                />
+                <Reference
+                    Name = "Microsoft.ApplicationBlocks.ExceptionManagement"
+                    AssemblyName = "Microsoft.ApplicationBlocks.ExceptionManagement"
+                    HintPath = "C:\ARF\TRB\COMUM\Microsoft.ApplicationBlocks.ExceptionManagement.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "VAK016"
+                    AssemblyName = "VAK016"
+                    HintPath = "bin\VAK016.dll"
+                />
+                <Reference
+                    Name = "IAU013"
+                    AssemblyName = "IAU013"
+                    HintPath = "C:\ARF\TRB\COMUM\IAU013.dll"
+                />
+                <Reference
+                    Name = "VAK019"
+                    AssemblyName = "VAK019"
+                    HintPath = "bin\VAK019.dll"
+                />
+                <Reference
+                    Name = "VAK020"
+                    AssemblyName = "VAK020"
+                    HintPath = "bin\VAK020.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Configuration" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Web" />
+                <Import Namespace = "System.Web.UI" />
+                <Import Namespace = "System.Web.UI.HtmlControls" />
+                <Import Namespace = "System.Web.UI.WebControls" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "ArqVAVFun.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKAutCtt.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKAutCtt.aspx.vb"
+                    DependentUpon = "DocVAKAutCtt.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKAutCtt.aspx.resx"
+                    DependentUpon = "DocVAKAutCtt.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKCsnRep.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKCsnRep.aspx.vb"
+                    DependentUpon = "DocVAKCsnRep.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKCsnRep.aspx.resx"
+                    DependentUpon = "DocVAKCsnRep.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKDdoRepPcp.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKDdoRepPcp.aspx.vb"
+                    DependentUpon = "DocVAKDdoRepPcp.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKDdoRepPcp.aspx.resx"
+                    DependentUpon = "DocVAKDdoRepPcp.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKDetAco.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKDetAco.aspx.vb"
+                    DependentUpon = "DocVAKDetAco.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKDetAco.aspx.resx"
+                    DependentUpon = "DocVAKDetAco.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKDetAcoMsgEnv.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKDetAcoMsgEnv.aspx.vb"
+                    DependentUpon = "DocVAKDetAcoMsgEnv.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKDetAcoMsgEnv.aspx.resx"
+                    DependentUpon = "DocVAKDetAcoMsgEnv.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKDetRep.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKDetRep.aspx.vb"
+                    DependentUpon = "DocVAKDetRep.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKDetRep.aspx.resx"
+                    DependentUpon = "DocVAKDetRep.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKFluDstRep.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKFluDstRep.aspx.vb"
+                    DependentUpon = "DocVAKFluDstRep.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKFluDstRep.aspx.resx"
+                    DependentUpon = "DocVAKFluDstRep.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKIncObs.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKIncObs.aspx.vb"
+                    DependentUpon = "DocVAKIncObs.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKIncObs.aspx.resx"
+                    DependentUpon = "DocVAKIncObs.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKLstAco.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKLstAco.aspx.vb"
+                    DependentUpon = "DocVAKLstAco.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKLstAco.aspx.resx"
+                    DependentUpon = "DocVAKLstAco.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKLstFluRep.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKLstFluRep.aspx.vb"
+                    DependentUpon = "DocVAKLstFluRep.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKLstFluRep.aspx.resx"
+                    DependentUpon = "DocVAKLstFluRep.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKLstPdrPrc.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKLstPdrPrc.aspx.vb"
+                    DependentUpon = "DocVAKLstPdrPrc.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKLstPdrPrc.aspx.resx"
+                    DependentUpon = "DocVAKLstPdrPrc.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DOCVAKLstRep.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DOCVAKLstRep.aspx.vb"
+                    DependentUpon = "DOCVAKLstRep.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DOCVAKLstRep.aspx.resx"
+                    DependentUpon = "DOCVAKLstRep.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKLstRpaNotFscRca.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKLstRpaNotFscRca.aspx.vb"
+                    DependentUpon = "DocVAKLstRpaNotFscRca.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKLstRpaNotFscRca.aspx.resx"
+                    DependentUpon = "DocVAKLstRpaNotFscRca.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKPdrPrc.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKPdrPrc.aspx.vb"
+                    DependentUpon = "DocVAKPdrPrc.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKPdrPrc.aspx.resx"
+                    DependentUpon = "DocVAKPdrPrc.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKRpdPrc.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKRpdPrc.aspx.vb"
+                    DependentUpon = "DocVAKRpdPrc.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKRpdPrc.aspx.resx"
+                    DependentUpon = "DocVAKRpdPrc.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DocVAKVldUsr.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DocVAKVldUsr.aspx.vb"
+                    DependentUpon = "DocVAKVldUsr.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DocVAKVldUsr.aspx.resx"
+                    DependentUpon = "DocVAKVldUsr.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Global.asax"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Global.asax.vb"
+                    DependentUpon = "Global.asax"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Global.asax.resx"
+                    DependentUpon = "Global.asax.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Styles.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsrConCab.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsrConCab.ascx.vb"
+                    DependentUpon = "UsrConCab.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UsrConCab.ascx.resx"
+                    DependentUpon = "UsrConCab.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "comum\default.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "comum\DocFunCmuJS.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "comum\DocFunItfUsrCadRepJS.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Data\MenuData.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaAvl.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaCjg.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaDdoBco.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaFlu.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaPnd.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaRep.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\AbaTetVnd.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgAla.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgAnt.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgApv.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgBrc.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgDet.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgDlgAcoApv.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgEnv.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgGrv.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgIfo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgPrx.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgRep.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgTitFnd.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgTop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ArqImgTpc.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgFnd.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgINAEdi01.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgINAFim01.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgTabDesDra01.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgTabDesDraIfo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgTabDesEsq02.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgTabDesEsqIfo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\ImgTabDesEsqTop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\LogoMartins.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\spacer.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\tabimage.gif"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

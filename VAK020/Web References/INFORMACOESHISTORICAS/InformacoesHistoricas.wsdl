@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://tempuri.org/DatasetValoresIndenizatorios.xsd" xmlns:tns="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" location="http://localhost/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas.asmx?schema=DatasetValoresIndenizatorios" />
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas">
+      <s:import namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" />
+      <s:element name="SaldoResidualRepresentanteObter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodigoRepresentante" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaldoResidualRepresentanteObterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaldoResidualRepresentanteObterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValoresIndenizatoriosObter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodigoRepresentante" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValoresIndenizatoriosObterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresIndenizatoriosObterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+        <s:complexType />
+      </s:element>
+      <s:element name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatasetValoresIndenizatorios" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any namespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaldoResidualRepresentanteObterSoapIn">
+    <wsdl:part name="parameters" element="tns:SaldoResidualRepresentanteObter" />
+  </wsdl:message>
+  <wsdl:message name="SaldoResidualRepresentanteObterSoapOut">
+    <wsdl:part name="parameters" element="tns:SaldoResidualRepresentanteObterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterSoapIn">
+    <wsdl:part name="parameters" element="tns:ValoresIndenizatoriosObter" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterSoapOut">
+    <wsdl:part name="parameters" element="tns:ValoresIndenizatoriosObterResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterSoapIn">
+    <wsdl:part name="parameters" element="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObter" />
+  </wsdl:message>
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterSoapOut">
+    <wsdl:part name="parameters" element="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaldoResidualRepresentanteObterHttpGetIn">
+    <wsdl:part name="CodigoRepresentante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoResidualRepresentanteObterHttpGetOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterHttpGetIn">
+    <wsdl:part name="CodigoRepresentante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterHttpGetOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpGetIn" />
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpGetOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:message name="SaldoResidualRepresentanteObterHttpPostIn">
+    <wsdl:part name="CodigoRepresentante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoResidualRepresentanteObterHttpPostOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterHttpPostIn">
+    <wsdl:part name="CodigoRepresentante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValoresIndenizatoriosObterHttpPostOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpPostIn" />
+  <wsdl:message name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpPostOut">
+    <wsdl:part name="Body" element="tns:DatasetValoresIndenizatorios" />
+  </wsdl:message>
+  <wsdl:portType name="InformacoesHistoricasSoap">
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Saldo Residual do Representante</documentation>
+      <wsdl:input message="tns:SaldoResidualRepresentanteObterSoapIn" />
+      <wsdl:output message="tns:SaldoResidualRepresentanteObterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Valores Indenizatórios do Representante</documentation>
+      <wsdl:input message="tns:ValoresIndenizatoriosObterSoapIn" />
+      <wsdl:output message="tns:ValoresIndenizatoriosObterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Maior Mês Válido Com Índice de Correção Cadastrado</documentation>
+      <wsdl:input message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterSoapIn" />
+      <wsdl:output message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="InformacoesHistoricasHttpGet">
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Saldo Residual do Representante</documentation>
+      <wsdl:input message="tns:SaldoResidualRepresentanteObterHttpGetIn" />
+      <wsdl:output message="tns:SaldoResidualRepresentanteObterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Valores Indenizatórios do Representante</documentation>
+      <wsdl:input message="tns:ValoresIndenizatoriosObterHttpGetIn" />
+      <wsdl:output message="tns:ValoresIndenizatoriosObterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Maior Mês Válido Com Índice de Correção Cadastrado</documentation>
+      <wsdl:input message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpGetIn" />
+      <wsdl:output message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="InformacoesHistoricasHttpPost">
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Saldo Residual do Representante</documentation>
+      <wsdl:input message="tns:SaldoResidualRepresentanteObterHttpPostIn" />
+      <wsdl:output message="tns:SaldoResidualRepresentanteObterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Valores Indenizatórios do Representante</documentation>
+      <wsdl:input message="tns:ValoresIndenizatoriosObterHttpPostIn" />
+      <wsdl:output message="tns:ValoresIndenizatoriosObterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtêm Maior Mês Válido Com Índice de Correção Cadastrado</documentation>
+      <wsdl:input message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpPostIn" />
+      <wsdl:output message="tns:MaiorMesValidoComIndiceDeCorrecaoCadastradoObterHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InformacoesHistoricasSoap" type="tns:InformacoesHistoricasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas/SaldoResidualRepresentanteObter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas/ValoresIndenizatoriosObter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas/MaiorMesValidoComIndiceDeCorrecaoCadastradoObter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InformacoesHistoricasHttpGet" type="tns:InformacoesHistoricasHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <http:operation location="/SaldoResidualRepresentanteObter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <http:operation location="/ValoresIndenizatoriosObter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <http:operation location="/MaiorMesValidoComIndiceDeCorrecaoCadastradoObter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InformacoesHistoricasHttpPost" type="tns:InformacoesHistoricasHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SaldoResidualRepresentanteObter">
+      <http:operation location="/SaldoResidualRepresentanteObter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValoresIndenizatoriosObter">
+      <http:operation location="/ValoresIndenizatoriosObter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaiorMesValidoComIndiceDeCorrecaoCadastradoObter">
+      <http:operation location="/MaiorMesValidoComIndiceDeCorrecaoCadastradoObter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InformacoesHistoricas">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="InformacoesHistoricasSoap" binding="tns:InformacoesHistoricasSoap">
+      <soap:address location="http://localhost/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InformacoesHistoricasHttpGet" binding="tns:InformacoesHistoricasHttpGet">
+      <http:address location="http://localhost/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InformacoesHistoricasHttpPost" binding="tns:InformacoesHistoricasHttpPost">
+      <http:address location="http://localhost/Martins.Web.Services.DelegacaoResponsabilidades/InformacoesHistoricas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

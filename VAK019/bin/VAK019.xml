@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>VAK019</name>
+    <version>1.0.0.0</version>
+    <fullname>VAK019, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="M:VAK019.BO_VAKCsnRep.CsnCidEstCep(System.String)">
+      <summary>
+ Consulta estado / cidade por CEP 
+ </summary>
+ <param name="sCeo" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	15/4/2005	Created 
+ </history></member>
+    <member name="M:VAK019.DB_VAKCsnRep.CsnUltMes(IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Consulta últimos meses 
+ </summary>
+ <param name="oCnx">Conexão com o banco de dados</param>
+ <returns>string xml contendo os dados</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	28/3/2005	Created 
+ </history></member>
+    <member name="M:VAK019.DB_VAKCsnRep.CsnVlrVndTet(System.String,System.String,System.String,System.String,System.Int32,IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Consulta valor de venda do território 
+ </summary>
+ <param name="sCodSup">Código do supervisor</param>
+ <param name="sAnoMesRef">Ano mês de referência</param>
+ <param name="sAnoMesRefAnt">Ano mês de referência anterior</param>
+ <param name="sAnoMesRefAntAnt">Ano mês de referência anterior anterior</param>
+ <param name="oCnx">Conexão com o banco de dados</param>
+ <returns>string xml contendo os dados</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	28/3/2005	Created 
+ </history></member>
+    <member name="M:VAK019.DB_VAKRep.CsnCidEstCep(System.String,System.String@,IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Consulta Cidade e Estado (Unidade da Federação) por CEP 
+ </summary>
+ <param name="sCep">Número do CEP</param>
+ <param name="sVlrErr">Valor do erro</param>
+ <param name="oCnx">Conexão com o banco de dados</param>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	15/4/2005	Created 
+ </history></member>
+  </members>
+</doc>

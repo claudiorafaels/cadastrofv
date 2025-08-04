@@ -1,0 +1,1088 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>VAK020</name>
+    <version>1.0.3670.19372</version>
+    <fullname>VAK020, Version=1.0.3670.19372, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="T:VAK020.BO_VAKCsnMsgCreEtn">
+      <summary>
+ Consulta mensagens de correio eletrônico gravadas na base 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKCsnMsgCreEtn.CsnMsgCreEtn(System.Int32)">
+      <summary>
+ Consulta mensagem de correio eletrônico (assunto, mensagem, remetente, destinatários) por 
+ número de seqüência da mensagem. 
+ </summary>
+ <param name="iNumSeqMsg">Número seq. mensagem correio eletrônico</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="T:VAK020.BO_VAKFluDstRep">
+      <summary>
+ Realiza operações de atualização e consulta para fluxo de desativação de representantes 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.#ctor">
+      <summary>
+ Construtor da classe. 
+ </summary>
+ <remarks>
+ Seta a identidade usada na thread atual. 
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.SetThreadIdentity">
+      <summary>
+ Seta a identidade usada na thread atual. 
+ </summary>
+ <remarks>
+ Recurso usado em sites na internet no Martins. 
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="T:VAK020.BO_VAKFluDstRep.enmDesSitFlu">
+      <summary>
+ Situações do fluxo de desativação 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="T:VAK020.BO_VAKFluDstRep.enmTipAcoFlu">
+      <summary>
+ Ações no fluxo de desativação 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnLstRep(System.Int32,System.Int32,System.String,System.Int32,VAK020.BO_VAKFluDstRep.enmDesSitFlu)">
+      <summary>
+ Consulta lista de RCAS (incluindo os sem fluxos) do GV 
+ </summary>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="sNomRep">Nome do representante</param>
+ <param name="iQdeDiaSemPed">Quant. dias sem emissão de pedido de vendas</param>
+ <param name="iDesSitFlu">Situação do fluxo</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnLstRpaNfsRep(System.Int32)">
+      <summary>
+ Consulta lista de documentos (Notas fiscais e RPAs) devidos pelo RCA 
+ </summary>
+ <param name="iCodRep">Código do representante</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnLstFluSup(System.Int32,System.Int32,System.String,System.DateTime,System.DateTime,System.Boolean,System.Int32)">
+      <summary>
+ Consulta lista de fluxo de desativação por gerente de mercado. 
+ </summary>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="sNomRep">Nome do representante</param>
+ <param name="dDatIni">Data inicial</param>
+ <param name="dDatFim">Data final</param>
+ <param name="bMinhasPendencias">Minhas pendências (sim/não)</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnMtvDst(System.Int32)">
+      <summary>
+ Consulta lista de motivos de desativação 
+ </summary>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnRepPorSup(System.Int32,System.Int32)">
+      <summary>
+ Consulta representantes por gerente de mercado. 
+ </summary>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	13/02/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnCidEstCid(System.Int32)">
+      <summary>
+ Consulta cidades do mesmo estado da cidade do parâmetro 
+ </summary>
+ <param name="iCodCid">Código da cidade</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnCid(System.String)">
+      <summary>
+ Consulta cidades da unidade da federação (estado) 
+ </summary>
+ <param name="sCodEstUni">Código unidade da federação (estado)</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.AcoFluDstRep(System.Int32@,System.Int32,System.DateTime,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int64,System.Int32,System.DateTime,System.Double,System.String,System.String[0:,0:],VAK020.BO_VAKFluDstRep.enmTipAcoFlu,System.String,System.Int32)">
+      <summary>
+ Aciona fluxo de desativação do representante (grava, inicia fluxo,...) 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="dDatCri">Data da criação</param>
+ <param name="iCodMtvDst">Código motivo desativação</param>
+ <param name="sDesMtvDstRep">Descrição motivo de desativação do representante</param>
+ <param name="sEndRep">Endereço do representante</param>
+ <param name="sNumTlfRep">Número do telefone do representante</param>
+ <param name="sNumTlfCelRep">Número do telefone celular do representante</param>
+ <param name="sNumFaxRep">Número do fax do representante</param>
+ <param name="iCodCidRep">Código da cidade do representante</param>
+ <param name="iCodCepRep">Código do CEP do representante</param>
+ <param name="iCodRepSbtVnd">Código do representante de vendas substituto</param>
+ <param name="dDatDocSlcDst">Data do documento de solicitação de desativação</param>
+ <param name="fVlrArdDstRep">Valor do acordo da desativação do representante</param>
+ <param name="sObsFlu">Observação</param>
+ <param name="PgnRsp">Lista de perguntas e respostas do início da desativação</param>
+ <param name="AcoFlu">Tipo da ação a ser tomada pelo método(somente salvar, iniciar fluxo...)</param>
+ <param name="sUrlSis">Endereço web (URL do sistema para incluir no email(no caso de início de fluxo)</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.AprovarFluxoGVAutomatico(System.Int32,VAK020.BO_VAKFluDstRep.enmTipAcoFlu,System.DateTime,System.Int32,VAK020.Constantes.TipoDesativacao,System.Decimal,IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Aprova fluxo pelo gerente de vendas automaticamente 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="AcoFlu">Tipo do fluxo de desativação</param>
+ <param name="dDatDocSlcDst">Data do documento de solicitação de desativação</param>
+ <param name="iCodFncRpnCri">Código funcionário responsável pela criação do fluxo</param>
+ <param name="TipoDesativacao">Tipo da desativação</param>
+ <param name="ValorTotalAcerto">Valor total do acerto</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.InsereAcaoCumprimentoContrato(System.Int32,System.Boolean,System.DateTime,System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Inserir ação para cumprimento de contrato 
+ </summary>
+ <param name="iCodFlu">Código de fluxo</param>
+ <param name="boolTransfereTerritorios" />
+ <param name="DataDocSolicitacaoDesativacao" />
+ <param name="iCodFncRpnCri" />
+ <param name="sTextoObservacao" />
+ <param name="oCnx" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio]	23/7/2009	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnEstUni">
+      <summary>
+ Consulta lista de unidades da federação (estados) 
+ </summary>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnFluDstRep(System.Int32,System.Boolean)">
+      <summary>
+ Consulta fluxo de desativação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="bObsProv">Observações provisórias? (sim/não) (caso do fluxo não iniciado - somente salvo).</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnLstAcoFlu(System.Int32,System.Int32)">
+      <summary>
+ Consulta lista de ações do fluxo de desativação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodAco">Código da ação</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.CsnTipAco">
+      <summary>
+ Consulta lista de tipos de ação 
+ </summary>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member>
+    <member name="M:VAK020.BO_VAKFluDstRep.IsrObsFlu(System.Int32,System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo)">
+      <summary>
+ Insere observação do fluxo de desativação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodObs">Código da observação</param>
+ <param name="sDesObs">Descrição da observação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>1 - OK, <member name="M:VAK020.BO_VAKFluDstRep.IsrAcoObsFlu(System.Int32,System.Int32,System.String)"><summary>
+ Insere ação OBSERVAÇÃO no fluxo de desativação. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="sDesObs">Descrição da observação</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.IsrAcoPdrPrc(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)"><summary>
+ Insere ação PEDIDO DE PARECER no fluxo de desativação. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="iCodFncDsn">Código do funcionário destinatário</param>
+ <param name="sDesObs">Descrição da observação</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.IsrAcoRspPrc(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)"><summary>
+ Insere ação PEDIDO DE PARECER no fluxo de desativação. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeqPedOpn">Núm. sequencial do pedido de parecer</param>
+ <param name="iCodAco">Código da ação</param>
+ <param name="sDesObs">Descrição da observação</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.CsnUsrSisDst(System.String)"><summary>
+ Consulta lista de nomes de funcionários por trecho(parte) do nome do funcionário. 
+ </summary>
+ <param name="sNomFnc">Trecho(parte) do nome do funcionário</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.CsnPedOpn(System.Int32,System.Int32,System.Int32,System.String@,System.String@)"><summary>
+ Consulta pedido de parecer 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeqPedOpn">Núm. sequencial do pedido de parecer</param>
+ <param name="iCodAco">Código da ação</param>
+ <param name="sPedOpn">Observação do pedido de parecer</param>
+ <param name="sRspOpn">Observação da resposta do pedido de parecer</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.CsnAcoGen(System.Int32,System.Int32,System.String@)"><summary>
+ Consulta ação genérica. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <param name="sObsAco">Observação da ação</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.CsnMsgCreEtn(System.Int32,System.Int32)"><summary>
+ Consulta mensagem de correio eletrônico. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.CsnLstPedOpn(System.Int32,System.Int32)"><summary>
+ Consulta lista de pedidos de parecer em aberto do fluxo específico para o gerente de mercado 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodRep">Código do representante</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.AprovarFluxoGV(System.Int32,System.String,System.Int32,System.Int32,VAK020.Constantes.TipoDesativacao,System.Boolean,System.Boolean,System.Int32,System.String,System.String,System.DateTime,System.Decimal,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ 
+ </summary>
+ <param name="CodigoFluxo" />
+ <param name="ObservacaoTexto" />
+ <param name="CodAuxAco" />
+ <param name="CodTipDstRep" />
+ <param name="tipoDesativacao" />
+ <param name="valorMaior" />
+ <param name="boolTransfereTerritorios" />
+ <param name="CodigoFuncionarioResponsavel" />
+ <param name="ListaStatusEquipamentos" />
+ <param name="URLSistema" />
+ <param name="DataDocSolicitacaoDesativacao" />
+ <param name="strSituacaoAtualFluxo" />
+ <param name="intModuloSolicitante" />
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	3/7/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.EmailEnviarAprovarFluxoGV(VAK020.Constantes.TipoDesativacao,System.Boolean,System.String,System.Decimal,System.Decimal,System.String,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Envia email para a ação "Aprovar fluxo pelo GV" 
+ </summary>
+ <param name="tipo">Tipo de desativação</param>
+ <param name="maiorOuIgual">Valor maior ou igual</param>
+ <param name="NomeRCA">Nome do representante</param>
+ <param name="CodFncRemetente">Código do funcionário remetente</param>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="URLSistema">URL do sistema</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.RelacionarFluxoComEquipamentos(System.Decimal,System.String,System.String,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Relaciona fluxo de desativação com equipamentos 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="ListaStatusEquipamentos">Lista status dos equipamentos</param>
+ <param name="URLSistema">URL do Sistema</param>
+ <param name="CodigoFuncionarioResponsavel">Código do funcionário responsável</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[raphael.sales]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.TransfereTerritoriosPorCodigoFluxo(System.Decimal,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Transfere territórios por código de fluxo 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.EnviarEmailAprovacaoGV(System.Decimal,System.String,System.Boolean,VAK020.Constantes.TipoDesativacao,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Envia email para a ação "Aprovação do Gerente de Vendas" 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="URLSistema">URL do sistema</param>
+ <param name="EnviarJuridico">Enviar email para o jurídico? (True/False)</param>
+ <param name="TipoDesativacao">Tipo da desativação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>ID do email</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.EnviarEmailAprovacaoGVComEquipamentos(System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Enviar email para aprovação do gerente de venda com equipamentos 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo de desativação</param>
+ <param name="URLSistema">URL do sistema</param>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.InserirEquipamentosRecuperados(System.Int32,System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Inserir ação equipamentos recuperados 
+ </summary>
+ <param name="intCodigoFluxo">Código do fluxo</param>
+ <param name="intCodigoFuncionarioResponsavel">Código funcionário responsável</param>
+ <param name="strTextoObservacao">Texto da observação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	3/7/2008	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.AlterarSituacaoRCAPorTipoDesativacao(System.Int32,System.DateTime,System.Int32,System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Altera SituaÇÃo RCA por tipo desativação 
+ </summary>
+ <param name="intCodigoTipoDesativacaoRCA">Código do tipo de desativação do RCA</param>
+ <param name="DataCartaRescisao">Data da carta de rescisão</param>
+ <param name="intCodigoRCA">Código do representante</param>
+ <param name="intCodigoSituacaoRCA">Código da situação do RCA</param>
+ <param name="intCodigoFuncionarioResponsavel">Código do funcionário responsável</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	27/7/2009	Created 
+ </history></member><member name="M:VAK020.BO_VAKFluDstRep.AlterarSituacaoRepresentante(System.Int32,System.Int32,System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ 
+ </summary>
+ <param name="NovoCodigoSituacaoRepresentante" />
+ <param name="CodigoRepresentante" />
+ <param name="CodigoAnteriorSituacaoRepresentante" />
+ <param name="CodigoFuncionarioResponsavel" />
+ <param name="oCnx" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio]	27/7/2009	Created 
+ </history></member><member name="T:VAK020.Constantes"><summary>
+ Centraliza as constantes globais utilizados pela aplicação 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member><member name="T:VAK020.Constantes.TipoDesativacao"><summary>
+ Tipos de desativação 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member><member name="T:VAK020.Constantes.ModulosAutorizacao"><summary>
+ Módulos do sistema 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="T:VAK020.Constantes.Acao"><summary>
+ Ações da desativação do fluxo 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member><member name="T:VAK020.Constantes.TipoDado"><summary>
+ Tipo de dado 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	27/7/2009	Created 
+ </history></member><member name="M:VAK020.Constantes.WordWrap(System.String,System.Int32)"><summary>
+ 'WordWrap' - Quebra texto 
+ </summary>
+ <param name="strTexto">Texto a ser quebrado</param>
+ <param name="intTamanhoMaximoLinha">Tamanho máximo para cada linha</param>
+ <returns>array de strings com texto quebrado</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	23/7/2009	Created 
+ </history></member><member name="T:VAK020.DB_VAKCsnMsgCreEtn"><summary>
+ Consulta informações da mensagem de correio eletrônico. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKCsnMsgCreEtn.CsnMsgCreEtn(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta corpo do texto da mensagem de correio eletrônico 
+ </summary>
+ <param name="iNumSeqMsg">Número seq. mensagem correio eletrônico</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKCsnMsgCreEtn.CsnMsgCreEtnEnd(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta endereços (remetente, destinatários(com cópia, c/c oculta) da mensagem de correio eletrônico. 
+ </summary>
+ <param name="iNumSeqMsg">Número seq. mensagem correio eletrônico</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKCsnMsgCreEtn.CsnMsgCreEtnCab(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta assunto da mensagem de correio eletrônico. 
+ </summary>
+ <param name="iNumSeqMsg">Número seq. mensagem correio eletrônico</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAK020.DB_VAKFluDstRep"><summary>
+ Realiza operações de atualização e consulta para fluxo de desativação de representantes 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member><member name="T:VAK020.DB_VAKFluDstRep.enmTipAcoFlu"><summary>
+ Tipos de ações possíveis no fluxo de desativação do representante (RCA). 
+ </summary>
+ <remarks>
+ Sempre que incluir novas ações na base de dados, deve-se incluir neste enumerador. 
+ </remarks>
+ <history>
+ 	[claudio.rafael]	22/01/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnPndRpaNotFscRep(IAU013.UO_IAUCnxAcsDdo,System.Int32)"><summary>
+ Consulta pendências de RPA e notas fiscais do representante (RCA). 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <param name="iCodRep">Código do representante (RCA)</param>
+ <returns>Conjunto de dados (dataset) com pendências</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	21/01/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstAcoFluRep(IAU013.UO_IAUCnxAcsDdo,System.Int32,VAK020.DB_VAKFluDstRep.enmTipAcoFlu)"><summary>
+ Consulta lista de ações de um fluxo. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <param name="iCodFluDstRep">Código do fluxo de desativação do representante</param>
+ <returns>Conjunto de dados (dataset) com lista de açõs do fluxo</returns>
+ <remarks>
+ SQL06 
+ </remarks>
+ <history>
+ 	[claudio.rafael]	22/01/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstRep(IAU013.UO_IAUCnxAcsDdo,System.Int32,System.Int32,System.String,System.Int32,System.String)"><summary>
+ Consulta lista de RCAS (incluindo os sem fluxos) do GV. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="sNomRep">Nome do representante</param>
+ <param name="iQdeDiaSemPed">Quant. dias sem emissão de pedido de vendas</param>
+ <param name="sDesSitFlu">Situação do fluxo de desativação</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstRpaNfsRep(IAU013.UO_IAUCnxAcsDdo,System.Int32)"><summary>
+ Consulta lista de RPAs/NFs devidos pelo RCA. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <param name="iCodRep">Código do representante</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstFluSup(IAU013.UO_IAUCnxAcsDdo,System.Int32,System.Int32,System.String,System.DateTime,System.DateTime,System.Boolean,System.Int32)"><summary>
+ Consulta lista de fluxos do Gerente de Mercado. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="sNomRep">Nome do representante</param>
+ <param name="dDatIni">Data inicial</param>
+ <param name="dDatFim">Data final</param>
+ <param name="bMinhasPendencias">Minhas pendências (sim/não)</param>
+ <param name="iCodFlu">Código Fluxo</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnCidEstUni(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta cidades da unidade da federação (estado) da cidade. 
+ </summary>
+ <param name="iCodCid">Código da cidade</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnCid(System.String,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta cidades da unidade da federação (estado). 
+ </summary>
+ <param name="sEstUni">Código da unidade da federação (estado)</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnMtvDst(IAU013.UO_IAUCnxAcsDdo,System.Int32)"><summary>
+ Consulta motivos da desativação. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	13/02/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnRepPorSup(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta representantes por gerente de mercado (podendo excluir um determinado da lista). 
+ </summary>
+ <param name="iCodSup">Código do gerente de mercado</param>
+ <param name="iCodRep">Código do representante para não ser listado</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset) com lista de representantes do gerente de mercado</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	4/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnPrxCodFlu(IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta próximo código disponível para código de fluxo de desativação. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Próximo código disponível para código de fluxo de desativação</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.DelFluDstRep(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+  Deleta dados provisórios relacionadas ao fluxo. 
+ </summary>
+ <param name="iCodFluDstRep">Código do fluxo de desativação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>1 - OK - <member name="M:VAK020.DB_VAKFluDstRep.IsrFluDstRep(System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int64,System.Int32,System.DateTime,System.Int32,System.Double,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Insere fluxo de desativação do representante. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodRep">Código do representante</param>
+ <param name="dDatCri">Data da criação</param>
+ <param name="iCodMtvDst">Código motivo desativação</param>
+ <param name="sDesMtvDstRep">Descrição motivo de desativação do representante</param>
+ <param name="sEndRep">Endereço do representante</param>
+ <param name="sNumTlfRep">Número do telefone do representante</param>
+ <param name="sNumTlfCelRep">Número do telefone celular do representante</param>
+ <param name="sNumFaxRep">Número do fax do representante</param>
+ <param name="iCodCidRep">Código da cidade do representante</param>
+ <param name="iCodCepRep">Código do CEP do representante</param>
+ <param name="iCodRepSbtVnd">Código do representante de vendas substituto</param>
+ <param name="dDatDocSlcDst">Data do documento de solicitação de desativação</param>
+ <param name="fVlrArdDstRep">Valor do acordo da desativação do representante</param>
+ <param name="sObsFlu">Observação</param>
+ <param name="PgnRsp">Lista de perguntas e respostas do início da desativação</param>
+ <param name="AcoFlu">Tipo da ação a ser tomada pelo método(somente salvar, iniciar fluxo...)</param>
+ <param name="sUrlSis">Endereço web (URL do sistema para incluir no email(no caso de início de fluxo)</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>1 - OK - <member name="M:VAK020.DB_VAKFluDstRep.IsrAcoFlu(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Insere ação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <param name="iCodAco">Código da ação</param>
+ <param name="iCodFncRpnCri">Código func. responsável pela criação</param>
+ <param name="iCodObs">Código da observação</param>
+ <param name="iCodAuxAco">Código auxiliar da ação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>1 - OK - <member name="M:VAK020.DB_VAKFluDstRep.IsrObsFlu(System.Int32,System.Int32,System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Insere observação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodObs">Código da observação</param>
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <param name="sDesObs">Descrição da observação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>1 - OK - <member name="M:VAK020.DB_VAKFluDstRep.CsnFluDstRep(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta fluxo de desativação 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnAcoFlu(System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta ações do fluxo 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnObsFlu(System.Int32,System.Boolean,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta observações do fluxo (provisórias ou definitivas) 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="bObsProv">Observações provisórias? (sim/não)</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstAcoFlu(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta lista de ações do fluxo 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodAco">Código da ação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnTipAco(IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta todos tipos de ações 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnEstUni(IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta unidades da federação (estados) 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnCdoPmt(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta conteúdo do parâmetro. 
+ </summary>
+ <param name="iCodPmt">Código do parâmetro</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Valor do parâmetro</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnDdoRepSupGer(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta informações da equipe de vendas(REP&gt;GM&gt;GV) por representante 
+ </summary>
+ <param name="iCodRep">Código do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnPrxSeqAcoFlu(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta próximo número sequencial de ação para o fluxo 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Próximo número sequencial de ação para o fluxo</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnPrxCodObsFlu(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta próximo número sequencial de ação para o fluxo 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Próximo número sequencial de ação para o fluxo</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnUsrSisDst(System.String,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta usuários do sistema por trecho(parte) do nome. 
+ </summary>
+ <param name="sNomFnc">Trecho do nome do funcionário</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ 	[Claudio.Rafael]	21/5/2009	Modified 
+      A consulta passa a trazer apenas os usuários do sistema. 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnPedOpn(System.Int32,System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta pedido / resposta de parecer por número sequencial (do pedido ou da resposta). 
+ </summary>
+ <param name="iCodFluDstRep" />
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <param name="iCodAco">Código da ação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnObsAco(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta observações da ação. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodObs">Código da observação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnAcoGen(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo)"><summary>
+ Consulta ações (exceto mensagem enviada e pedido/resposta parecer) 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iNumSeq">Número sequencial da ação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.CsnLstPedOpn(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta lista de pedidos de parecer pendentes (por funcionário). 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodFncRpnCri">Código func. responsável pela criação</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.MaiorMesValidoComIndiceDeCorrecaoCadastradoObter(IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta o maior mês válido com índice de correção monetária. 
+ </summary>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ValoresIndenizatoriosObter(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta os Valores Indenizatorios do representante especificado. 
+ </summary>
+ <param name="CodigoRepresentante">Código do Representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[raphael.sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.SaldoResidualRepresentanteObter(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta o saldo residual do representante especificado. 
+ </summary>
+ <param name="CodigoRepresentante">Código do Representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterParametro(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta o parametros. 
+ </summary>
+ <param name="CodigoParametro">Código do Parâmetro</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterRepresentantePorFluxo(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta os representantes por fluxos. 
+ </summary>
+ <param name="CodigofluxoDesativacaoRepresentante">Código do fluxo da desativação do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterRepresentanteSubstitutoAtivo(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Obtem os representantes ativos. 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael Sales]	14/01/2010	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterCodObservacaoPorFluxo(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta próximo número sequencial de ação para o fluxo 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Próximo número sequencial de ação para o fluxo</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterFluxoTotal(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta o fluxo. 
+ </summary>
+ <param name="CodigofluxoDesativacaoRepresentante">Código do fluxo da desativação do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.FuncionariosPorModuloObter(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta os funcionários por módulo. 
+ </summary>
+ <param name="CodigoModulo">Código do Modulo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterListaEquipamentoStatusRecuperacao(System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Obtêm a lista de equipamentos em recuperação por status 
+ </summary>
+ <param name="CodigofluxoDesativacaoRepresentante">Código do fluxo da desativação do representante</param>
+ <param name="ListaStatus">Lista os status</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.RelacaoEquipamentosRelacionadosObter(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta a lista de equipamento de status dos representantes por fluxos. 
+ </summary>
+ <param name="CodigofluxoDesativacaoRepresentante">Código do fluxo da desativação do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ExcluirRelacionamentoFluxComEquipamento(System.Int32,System.String,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Exclue relacionamento do fluxo com equipamento de informática 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="NumSerEqpIfr">Número de série do equipamento de informática</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.InserirRelacionamentoFluxComEquipamento(System.Int32,System.String,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Exclue relacionamento do fluxo com equipamento de informática 
+ </summary>
+ <param name="CodigoFluxo">Código do fluxo</param>
+ <param name="NumSerEqpIfr">Número de série do equipamento de informática</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	24/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.FluxoEquipamentosStatusAtualizar(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Atualiza o status do equipamento do fluxo. 
+ </summary>
+ <param name="CodigoStatus">Código de status</param>
+ <param name="CodigoFluxo">Código do Fluxo</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	20/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.FluxoEquipamentosHistoricoInserir(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Insere os histórico de equipamentos. 
+ </summary>
+ <param name="CodigoTerritorioVenda">Código do território de venda</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	20/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.AtualizarSituacaoRepresentante(System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Atualiza situação do representante 
+ </summary>
+ <param name="CodigoSituacaoRepresentante">Código da situação do representante</param>
+ <param name="CodigoRepresentante">Código do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	27/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.InserirHistoricoAntigo(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Insere histórico antigo 
+ </summary>
+ <param name="CodigoRepresentante">Código do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	27/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObterTerritoriosSemSoliticacaoTransferencia(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Consulta os territorios sem solicitação dos representantes por fluxos. 
+ </summary>
+ <param name="CodigofluxoDesativacaoRepresentante">Código do fluxo da desativação do representante</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <returns>Conjunto de dados (dataset)</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	17/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.ObtemApropriacaoVigorTerritório(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Obtem apropriação em vigor para o território. 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael Sales]	14/01/2010	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.AtualizarTerritorio(System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Atualiza os territórios. 
+ </summary>
+ <param name="CodigoTerritorioVenda">Código do território de venda</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	20/7/2009	Created 
+ </history></member><member name="M:VAK020.DB_VAKFluDstRep.InserirTerritorio(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,IAU013.UO_IAUCnxAcsDdo@)"><summary>
+ Insere os territórios. 
+ </summary>
+ <param name="CodigoTerritorioVenda">Código do território de venda</param>
+ <param name="oCnx">Conexão com banco de dados</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Raphael.Sales]	20/7/2009	Created 
+ </history></member></returns></member></returns></member></returns></member></returns></member></returns></member>
+  </members>
+</doc>

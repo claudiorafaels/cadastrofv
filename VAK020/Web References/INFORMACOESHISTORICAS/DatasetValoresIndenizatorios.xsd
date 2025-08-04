@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetValoresIndenizatorios.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetValoresIndenizatorios.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetValoresIndenizatorios.xsd" id="DatasetValoresIndenizatorios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetValoresIndenizatorios">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tabelaValoresIndenizatorios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="UMDOZEAVOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UMTERCO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tabelaSaldoResidual">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="VLRSLDRSD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tabelaIndicesCadastrados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="MESREF" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

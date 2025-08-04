@@ -1,0 +1,864 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>VAKItfUsrWeb</name>
+    <version>1.0.3670.19372</version>
+    <fullname>VAKItfUsrWeb, Version=1.0.3670.19372, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="T:VAKItfUsrWeb.VAKUtl">
+      <summary>
+ Biblioteca de funcoes de apoio as tela do VAK 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+   Criacao : Clever Anjos 
+ Copyright : SWB Soluções 
+          1.0.0 - 02/12/2003 - Clever 
+          1.0.1 - 29/12/2003 - Clever - otimizando algumas funções e correcao na funcao funSetErr 
+          1.0.2 - 29/12/2003 - Gutierrez - nova função funRetTxtSemCod 
+          1.0.3 - 08/01/2004 - Clever - Correcao de bug na funXMLArray quando é passado um xml sem dados 
+          1.0.4 - 13/04/2004 - Ricardo - Adaptação para o projeto VAK 
+          1.0.5 - 14/12/2004 - Getulio de Morais Pereira [getulio.m.pereira@treynet.com.br] 
+                             - Inclusao de constante 'pprVlrMnmPvtAvl' para uso em Aprovacao Automatica de RCA 
+ </history></member>
+    <member name="P:VAKItfUsrWeb.VAKUtl.pprVlrMnmPvtAvl">
+      <summary>
+ Valor minimo definido no aproveitamento de uma dada avaliacao. 
+ </summary>
+ <value />
+ <remarks>
+ Armazena o valor minimo definido para as notas obtidas em avaliacoes do Formar. 
+ Utilizado para Aprovacao Automatica de RCAs. 
+ </remarks>
+ <history>
+ 	[Getulio de Morais Pereira]	12/20/2004	getulio.m.pereira@treynet.com.br Created 
+ </history></member>
+    <member name="M:VAKItfUsrWeb.VAKUtl.funFrmNumIsr(System.String)">
+      <summary>
+ Formata numero. 
+ </summary>
+ <param name="Dado">String numerica a ser formatada</param>
+ <returns>String numerica formatada.</returns>
+ <remarks>
+ Retorna o numero fornecido, segundo formatacao x,xxx.xx 
+ </remarks>
+ <history>
+ 	[Getulio de Morais Pereira]	12/28/2004	Modificacao na formatacao 
+ </history></member>
+    <member name="M:VAKItfUsrWeb.VAKUtl.funFrmNum(System.String)">
+      <summary>
+ Formata valores numericos. 
+ </summary>
+ <param name="Dado">String contendo o valor numerico a ser formatado.</param>
+ <returns>Valor numerico formatado.</returns>
+ <remarks>
+ Fromata o valor numerico passado como parametro segundo o padrao "Portugues do Brasil", <BR>
+ independentemente da configuracao do Sistema Operacional hospedeiro da aplicacao. 
+ <member name="M:VAKItfUsrWeb.VAKUtl.funFrmStrNro(System.String)"><summary>
+ Formata uma string numerica, segundo padrao pt-BR. 
+ </summary>
+ <param name="str">String numerica a ser formatada.</param>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	1/29/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKCsnRep.bindDataGrid(System.String)"><summary>
+ Preenche o quadro de resultado de pesquisa de RCA. 
+ </summary>
+ <param name="sortField">Parametro opcional para ordenacao.</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Getulio de Morais Pereira]	1/3/2005	Introducao de trecho de codigo-fonte para formatacao do CPF. 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.InfCadRep_Load(System.String,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)"><summary>
+ 
+ </summary>
+ <param name="sCodSup" />
+ <param name="sLstEst">Lista dos Estados</param>
+ <param name="sLstBco">Lista dos Bancos cadastrados</param>
+ <param name="sLstSgmMcd">Lista dos Segmentos de Mercado</param>
+ <param name="sLstGerVnd">Lista dos Gerentes de Vendas</param>
+ <param name="sLstCtn">Lista das Competencias</param>
+ <param name="sLstAvl">Lista das Avaliacoes</param>
+ <param name="sLstTet">Lista dos Territorios</param>
+ <param name="sUltMes" />
+ <param name="sVlrVndTet" />
+ <param name="sErr" />
+ <returns />
+ <remarks>
+ Parametro sLstEst = nothing implica uso de dados estaticos (nao acessa o Banco de Dados). 
+ </remarks>
+ <history>
+ 	[gperei]	2/2/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.AgeBco_Load(System.String)"><summary>
+ Carrega lista de Agencias Bancarias (list box). 
+ </summary>
+ <param name="sCodBco">Codigo do banco correspondente.</param>
+ <returns>XML contendo o resultado da busca.</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/2/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.Cid_Load(System.String)"><summary>
+ Carrega lista (list box) de Cidades. 
+ </summary>
+ <param name="sCodEst">Codigo do Estado correspondente.</param>
+ <returns>XML contendo resultado da busca.</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/2/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.Bai_Load(System.String)"><summary>
+ Carrega lista de Bairros (list box). 
+ </summary>
+ <param name="sCodCid">Codigo da cidade correspondente.</param>
+ <returns>XML contendo o resultado da busca.</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/2/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.CplBai_Load(System.String)"><summary>
+ Carrega lista de Complemento de Bairro (list box). 
+ </summary>
+ <param name="sCodBai">Codigo do bairro correspondente.</param>
+ <returns>XML contendo o resultado da busca.</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/2/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.InfRepCpf_Load(System.String,System.String@,System.String@,System.String@,System.String@,System.String@)"><summary>
+ Verifica se o candidato ja foi representante Martins. 
+ </summary>
+ <param name="sNumCpf">Numero de CPF do candidato</param>
+ <param name="sIdtRepTrb" />
+ <param name="sRstPva">Dados dos resultados das provas</param>
+ <param name="sAcePnd">Dados de acertos pendentes</param>
+ <param name="sAcoTrb">Dados de acoes trabalhistas</param>
+ <param name="sIdtRepTrbTmp">Dados do cadastro do candidato</param>
+ <returns>TRUE, caso ja tenha sido representante Martins</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/22/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.AbsLstCidEstUni"><summary>
+ Preenche os combos da cidade e do estado da união 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	15/4/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.AbsLstBai"><summary>
+ Preenche o combo dos bairros da cidade 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[????????]	??/?/200?	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.VerificaPreenchimento"><summary>
+ Funcao para verificacao de campos de preenchimento obrigatorio. 
+ </summary>
+ <returns>Valor booleano indicando ocorrencia ou nao de pelo menos um campo obrigatorio nao preenchido 
+ </returns>
+ <remarks>
+ </remarks>
+ <history>
+    VerificaPreenchimento() <BR>
+          . Data : 13/12/2004 <BR>
+          . Autor : Getulio de Morais Pereira [getulio.m.pereira@treynet.com.br] <BR>
+          . Adicao de trecho de codigo para verificacao do preenchimento de campos obrigatorios <BR>
+            [nome, data de nascimento, quantidade de filhos] na aba Conjuge. 
+ <member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.btnIsr_Click(System.Object,System.EventArgs)"><summary>
+ Evento OnClick do botao de insercao 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ Acoes : 
+      . insere as informacoes do RCA na tabela temporaria. 
+      . monitora ocorrencias de tentativa de insercao de registros duplicados na tabela temporaria, 
+        registrando mensagens de aviso ("Warning") no log ("Application") do Sistema Operacional (Event Viewer). 
+ </remarks>
+ <history>
+     [Getulio de Morais Pereira]	15/12/2004	Tratamento contra insercao de dados redundantes. <BR>
+ 	[Getulio de Morais Pereira]	23/12/2004	Tratamento de Aprovacao Automatica de Requisicao. <BR>
+     [Getulio de Morais Pereira] 27/12/2004  Tratamento de TipFrmPgt em funcao do Banco <BR>
+ 
+ <member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.PreencheDdoRepExr(System.String)"><summary>
+ Preencho o formulario de cadastro com informacoes pre-existentes no sistema. 
+ </summary>
+ <param name="sCodRep">Codigo do representante Martins.</param>
+ <returns>Valor booleano indicando sucesso/fracasso no preenchimento dos dados.</returns>
+ <remarks>
+ Funcao auxiliar para preenchimento do formulario de cadastro. 
+ </remarks>
+ <history>
+ 	[gperei]	2/24/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.btnCsnTet_Click(System.Object,System.EventArgs)"><summary>
+ Consulta valores de venda do território 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	29/3/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.btnCsnBco_Click(System.Object,System.EventArgs)"><summary>
+ Consulta banco do cliente 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	13/4/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.btnCsnAge_Click(System.Object,System.EventArgs)"><summary>
+ Consulta agência do cliente 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	13/4/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDdoRepPcp.csnCep_Click(System.Object,System.EventArgs)"><summary>
+ Evento mudar CEP 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[crsilva]	15/4/2005	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKDetAco"><summary>
+ Exibe detalhes da ação (ação genérica, exceto mensagem enviada e solicitação/resposta parecer. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetAco.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetAco.btnVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Aciona botão voltar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKDetAcoMsgEnv"><summary>
+ Exibe detalhes da ação do tipo MENSAGEM ENVIADA (EMAIL). 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKDetAcoMsgEnv.enmTipoEndereco"><summary>
+ Tipos de endereço de email. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetAcoMsgEnv.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetAcoMsgEnv.btnVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Aciona botão voltar 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetRep.InfRepCpf_Load(System.String,System.String@,System.String@,System.String@,System.String@,System.String@)"><summary>
+ Verifica se o candidato ja foi representante Martins. 
+ </summary>
+ <param name="sNumCpf">Numero de CPF do candidato</param>
+ <param name="sIdtRepTrb" />
+ <param name="sRstPva">Dados dos resultados das provas</param>
+ <param name="sAcePnd">Dados de acertos pendentes</param>
+ <param name="sAcoTrb">Dados de acoes trabalhistas</param>
+ <param name="sIdtRepTrbTmp">Dados do cadastro do candidato</param>
+ <returns>TRUE, caso ja tenha sido representante Martins</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[gperei]	2/22/2005	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKDetRep.LnkGrv_Click(System.Object,System.EventArgs)"><summary>
+ Salva alteracoes nas informacoes do RCA em processo de cadastramento. 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+     [Getulio de Morais Pereira] 27/12/2004  Tratamento de TipFrmPgt em funcao do Banco <BR>
+ 
+ <member name="T:VAKItfUsrWeb.Recisao"><summary>
+ Exibe detalhes do fluxo de desativação do representante 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.ControlesDesabilitar"><summary>
+ Desabilita controles. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.CarregarDados(System.Int32,System.Boolean,System.String)"><summary>
+ Carrega dados do fluxo. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="bObsProv" />
+ <param name="sTipAco" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.carregarCidade(System.Int32)"><summary>
+ Carrega cidade. 
+ </summary>
+ <param name="iCodCid">Código da cidade</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.CarregarCombos"><summary>
+ Carrega combos (unidades da federação, motivos de desativação). 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.CarregarPerguntas"><summary>
+ Carrega perguntas. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.BtnAcoes_Click(System.Object,System.EventArgs)"><summary>
+ Aciona botão ações. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.cmdVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Aciona botão voltar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.FormularioValidar(System.String@)"><summary>
+ Valida dados digitados no formulário. 
+ </summary>
+ <param name="sMsgErr">Mensagem de erro</param>
+ <returns>Verdadeiro, se formulário válido - Falso, se formulário inválido.</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.cmdGrvFlu_Click(System.Object,System.EventArgs)"><summary>
+ Aciona botões salvar, iniciar fluxo e notificar representante. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.FluxoAcionar(VAK020.BO_VAKFluDstRep.enmTipAcoFlu)"><summary>
+ Aciona fluxo (salvar, iniciar fluxo...) 
+ </summary>
+ <param name="TipAcoFlu">Tipo da ação no fluxo.</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.rdoIniRep_CheckedChanged(System.Object,System.EventArgs)"><summary>
+ Responde mudança no agente que iniciou o fluxo (representante ou empresa). 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.lstEstUni_SelectedIndexChanged(System.Object,System.EventArgs)"><summary>
+ Responde à mudañça de unidade da federação. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.cmdLstAco_Click(System.Object,System.EventArgs)"><summary>
+ Responde ao clique no botão Ver e executar ações. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.rdoRepSbt_CheckedChanged(System.Object,System.EventArgs)"><summary>
+ REsponse à mudança no checkbox de substituto. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.Recisao.grdPgnRsp_ItemDataBound(System.Object,System.Web.UI.WebControls.DataGridItemEventArgs)"><summary>
+ Preenchimento do grid. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKIncObr"><summary>
+ Exibe Incluir ação - INCLUIR OBSERVAÇÃO 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKIncObr.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKIncObr.btnConfirmar_Click(System.Object,System.EventArgs)"><summary>
+ Responde botão confirmar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKIncObr.btnCancelar_Click(System.Object,System.EventArgs)"><summary>
+ Responde botão cancelar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKLstAco"><summary>
+ Exibe lista de ações do fluxo. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.CarregaTiposAcao"><summary>
+ Carrega tipos de ação. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.CarregaAcoes(System.Int32,System.Int32)"><summary>
+ Carrega ações. 
+ </summary>
+ <param name="iCodFlu">Código do fluxo</param>
+ <param name="iCodAco">Código da ação</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.CarregaGrid(System.Data.DataSet@)"><summary>
+ Carrega grid. 
+ </summary>
+ <param name="oGrpDdoAco">Conjunto de dados(dataset)</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.GrpDdoAco_PageIndexChanged(System.Object,System.Web.UI.WebControls.DataGridPageChangedEventArgs)"><summary>
+ Response evento mudança de página no grid. 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.GrpDdoAco_SortCommand(System.Object,System.Web.UI.WebControls.DataGridSortCommandEventArgs)"><summary>
+ Responde evento ordenação do grid. 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.lstTipoAcoes_SelectedIndexChanged(System.Object,System.EventArgs)"><summary>
+ Responde evento mudança no tipo de ação. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.btnVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão voltar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.btnIcrobs_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão incluir observação. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.btnRpdPrc_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão responder parecer. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstAco.btnPdrPrc_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão pedido parecer. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKLstFluRep"><summary>
+ Exibe lista de fluxo de desativação. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	04/02/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.CarregarFluxos"><summary>
+ Carrega fluxos. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.btnConsultar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão consultar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.GrpDdoFluDst_PageIndexChanged(System.Object,System.Web.UI.WebControls.DataGridPageChangedEventArgs)"><summary>
+ Responde evento mudança de página no grid. 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.GrpDdoFluDst_SortCommand(System.Object,System.Web.UI.WebControls.DataGridSortCommandEventArgs)"><summary>
+ Responde evento ordernar do grid. 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.btnLstRep_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão 'Lista de RCAs'. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstFluRep.chkMinhasPendencias_CheckedChanged(System.Object,System.EventArgs)"><summary>
+ Responde evento checar minhas pendências. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKLstPdrPrc"><summary>
+ Exibe lista de pedidos de parecer pendentes. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstPdrPrc.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstPdrPrc.btnVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão voltar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DOCVAKLstRep"><summary>
+ Exibe lista de representantes e fluxos. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	04/02/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.CarregarRepresentantes(System.Boolean)"><summary>
+ Carrega representantes. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[claudio.rafael]	04/02/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.btnConsultar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão consultar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.GrpDdoFluDst_PageIndexChanged(System.Object,System.Web.UI.WebControls.DataGridPageChangedEventArgs)"><summary>
+ Manipula o evento GrpDdoFluDst.PageIndexChanged 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ Controla a paginação do grid que lista os RCAs 
+ </remarks>
+ <history>
+ 	[claudio.rafael]	01/02/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.GrpDdoFluDst_SortCommand(System.Object,System.Web.UI.WebControls.DataGridSortCommandEventArgs)"><summary>
+ Manipula o evento GrpDdoFluDst.SortCommand 
+ </summary>
+ <param name="source" />
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ Controla a ordenação do grid que lista os RCA's disponíveis 
+ </remarks>
+ <history>
+ 	[claudio.rafael]	01/02/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DOCVAKLstRep.btnLstFlu_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão 'Fluxos de desativação...' 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKLstRpaNotFscRca"><summary>
+ Exibe lista de documentos pendentes do RCA (notas fiscais e RPAs). 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstRpaNotFscRca.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKLstRpaNotFscRca.cmdVoltar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento do botão voltar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKPdrPrc"><summary>
+ Exibe formulário de inclusão de ação - PEDIDO DE PARECER. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKPdrPrc.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKPdrPrc.btnConfirmar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão confirmar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKPdrPrc.btnCancelar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão cancelar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKPdrPrc.cmdCsnFnc_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento botão consultar funcionário. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="T:VAKItfUsrWeb.DocVAKRpdPrc"><summary>
+ Exibe ação solicitação / resposta de parecer 
+ </summary>
+ <remarks>
+ A página serve tanto para exibir o tipo de ação como para responder o parecedr. 
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKRpdPrc.Page_Load(System.Object,System.EventArgs)"><summary>
+ Carga da página. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKRpdPrc.ControlesBloquear(System.Boolean)"><summary>
+ Bloqueia controles como somente leitura. 
+ </summary>
+ <param name="bSomenteLeitura">Somente leitura (sim/não)</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKRpdPrc.btnConfirmar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento do botão confirmar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member><member name="M:VAKItfUsrWeb.DocVAKRpdPrc.btnCancelar_Click(System.Object,System.EventArgs)"><summary>
+ Responde evento do botão cancelar. 
+ </summary>
+ <param name="sender">Objeto remetente</param>
+ <param name="e">Argumentos do evento</param>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Claudio.Rafael]	14/3/2008	Created 
+ </history></member></BR></history></member></BR></BR></BR></history></member></BR></BR></BR></BR></history></member></BR></remarks></member>
+  </members>
+</doc>

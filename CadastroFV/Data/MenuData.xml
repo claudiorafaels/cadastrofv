@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<menuitem id="1" title="Representante">
+		<!--<menuitem id="11" title="Cadastro" url="javascript:window.location.href='DocVAKDdoRepPcp.aspx#Cad'"/>-->
+    <!--<menuitem id="12" title="Consulta" url="javascript:window.location.href='DocVAKCsnRep.aspx'"/>-->
+		<menuitem id="13" title="Rescisão de Contrato" url="javascript:window.location.href='DOCVAKLstRep.aspx'"/>
+	</menuitem>
+	<menuitem id="2" title="Sair" url="javascript:window.close()" /> 
+</root>

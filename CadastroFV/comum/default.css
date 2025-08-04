@@ -1,0 +1,107 @@
+* {
+	FONT-FAMILY: tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 12px; 	
+}
+
+body {
+	BACKGROUND-COLOR:white;
+    FONT-SIZE:.8em;
+    FONT-WEIGHT:normal;
+    LETTER-SPACING:normal;
+    TEXT-TRANSFORM:none;
+    WORD-SPACING:normal
+}
+
+A:link {	
+	text-decoration:underline;
+	color:Blue;
+	}	
+		
+A:visited {	
+	text-decoration:underline;
+	color:Blue;
+	}	
+		
+A:active {	
+	text-decoration:underline;	
+	color:Blue;
+	}	
+		
+A:hover {		
+	text-decoration : underline;
+	color:Blue;
+}
+
+div {
+	background-color:Transparent ;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+}
+
+.btnCls A
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11px;
+    TEXT-TRANSFORM: none;
+    CURSOR: hand;
+    COLOR: #0f4871;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: normal;
+    TEXT-DECORATION: none
+}
+.btnCls
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11px;
+    TEXT-TRANSFORM: none;
+    CURSOR: hand;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: normal;
+    TEXT-DECORATION: none
+}
+.btnCls A:visited
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11px;
+    TEXT-TRANSFORM: none;
+    CURSOR: hand;
+    COLOR: #0f4871;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: normal;
+    TEXT-DECORATION: none
+}
+.btnCls A:hover
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11px;
+    TEXT-TRANSFORM: none;
+    CURSOR: hand;
+    COLOR: white;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial;
+    FONT-VARIANT: normal;
+    TEXT-DECORATION: none;
+}
+
+.btn {
+	background-color:Transparent ;
+}
+
+.ativa 
+{
+	position: absolute;	
+	top: 130px;
+	left: 7px;
+	
+}
+table 
+{
+	vertical-align : top ;
+}	
